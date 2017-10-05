@@ -142,9 +142,9 @@ b機器執行把 url push 到 redis 中
 兩台機器存的內容也會不一樣，或是第一次開一台，第二次開兩台，把第兩次的檔案合併會等於第一次爬取的檔案內容。
 
 # 結尾
-#####注意：
+##### 注意：
 ##### 1. RedisSpider 不需要寫 start_urls (很多教學寫分散式但是都沒用到這個 RedisSpider 有點傻眼，一般的 scrapy 是用這個 CrawlSpider，要啟用 Redis ，就要用 RedisSpider (apple.py裡面))
 ##### 2. 必須指定 redis_key (apple.py裡面)，爬蟲才會去讀取 Redis 這個 key 中存的值，並根據指令的 key ，由 redis-cli -h 10.2.0.10 lpush key start_urls。    
 ##### 3. 爬取的地方，我有點偷懶使用 BeautifulSoup ，官網就有直白的說 BeautifulSoup 就是慢，建議使用內建的 xpath, css selector...
     
-附上 [github](https://github.com/wutienyang/scrapy_redis_example)
+附上 [Blog](http://wutienyang-blog.logdown.com/posts/2777588--scrapy-redis)
